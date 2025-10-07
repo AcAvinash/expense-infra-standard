@@ -32,5 +32,5 @@ resource "aws_ssm_parameter" "app_alb_sg_id" {
 resource "aws_ssm_parameter" "frontend_alb_sg_id" {
   name  = "/${var.project_name}/${var.env}/frontend_alb_sg_id"
   type  = "String"
-  value = module.web_alb_sg.security_group_id # module should have output declaration
+  value = module.frontend_alb_sg.security_group_id # module should have output declaration
 }
